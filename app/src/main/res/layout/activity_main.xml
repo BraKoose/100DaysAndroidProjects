@@ -42,7 +42,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/roboto"
-                android:text="@string/done_button" />
+                android:text="@string/done_button"
+                android:onClick="clickHandlerFunction"/>
 
             <TextView
                 android:id="@+id/nickname_text"
