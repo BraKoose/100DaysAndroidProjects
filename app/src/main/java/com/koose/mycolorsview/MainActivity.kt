@@ -28,8 +28,19 @@ class MainActivity : AppCompatActivity() {
         val rootConstraintLayout = findViewById<View>(R.id.constraint_layout)
 
         val redButton = findViewById<Button>(R.id.red_button)
+        redButton.setOnClickListener {
+            boxThreeText.setBackgroundResource(R.color.my_red)
+        }
         val greenButton = findViewById<Button>(R.id.green_button)
+        greenButton.setOnClickListener {
+            boxFourText.setBackgroundResource(R.color.my_green)
+        }
         val yellowButton = findViewById<Button>(R.id.yellow_button)
+        yellowButton.setOnClickListener {
+            boxFiveText.setBackgroundResource(R.color.my_yellow)
+        }
+
+
 
         val clickableViews: List<View> =
             listOf(boxOneText, boxTwoText, boxThreeText,
@@ -52,12 +63,7 @@ class MainActivity : AppCompatActivity() {
             R.id.box_three_text -> view.setBackgroundColor(Color.BLUE)
             R.id.box_four_text -> view.setBackgroundColor(Color.MAGENTA)
             R.id.box_five_text -> view.setBackgroundColor(Color.BLUE)
-
             //
-            R.id.red_button -> view.setBackgroundResource(R.color.my_red)
-            R.id.yellow_button -> view.setBackgroundResource(R.color.my_yellow)
-            R.id.green_button -> view.setBackgroundResource(R.color.my_green)
-
             else -> view.setBackgroundColor(Color.LTGRAY)
 
 
