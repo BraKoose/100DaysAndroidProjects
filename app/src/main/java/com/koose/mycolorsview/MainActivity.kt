@@ -27,25 +27,22 @@ class MainActivity : AppCompatActivity() {
 
         val rootConstraintLayout = findViewById<View>(R.id.constraint_layout)
 
-        val redButton = findViewById<Button>(R.id.red_button)
-        redButton.setOnClickListener {
-            boxThreeText.setBackgroundResource(R.color.my_red)
-        }
-        val greenButton = findViewById<Button>(R.id.green_button)
-        greenButton.setOnClickListener {
-            boxFourText.setBackgroundResource(R.color.my_green)
-        }
-        val yellowButton = findViewById<Button>(R.id.yellow_button)
-        yellowButton.setOnClickListener {
-            boxFiveText.setBackgroundResource(R.color.my_yellow)
-        }
-
-
+        val tooglebar = findViewById<TextView>(R.id.toggleButton)
+        val tooglebar2 = findViewById<TextView>(R.id.toggleButton2)
+        val tooglebar3 = findViewById<TextView>(R.id.toggleButton3)
+        val tooglebar4 = findViewById<TextView>(R.id.toggleButton4)
+        val tooglebar5 = findViewById<TextView>(R.id.toggleButton5)
+        val tooglebar6 = findViewById<TextView>(R.id.toggleButton6)
+        val tooglebar7 = findViewById<TextView>(R.id.toggleButton7)
+        val tooglebar8 = findViewById<TextView>(R.id.toggleButton8)
+        val tooglebar9 = findViewById<TextView>(R.id.toggleButton9)
+        val tooglebar10 = findViewById<TextView>(R.id.toggleButton10)
 
         val clickableViews: List<View> =
             listOf(boxOneText, boxTwoText, boxThreeText,
                 boxFourText, boxFiveText, rootConstraintLayout,
-                redButton, greenButton, yellowButton)
+                tooglebar, tooglebar2, tooglebar3,tooglebar4, tooglebar5, tooglebar6, tooglebar7,
+                tooglebar8,tooglebar9, tooglebar10)
 
         for (item in clickableViews) {
             item.setOnClickListener { makeColored(it) }
@@ -63,6 +60,16 @@ class MainActivity : AppCompatActivity() {
             R.id.box_three_text -> view.setBackgroundColor(Color.BLUE)
             R.id.box_four_text -> view.setBackgroundColor(Color.MAGENTA)
             R.id.box_five_text -> view.setBackgroundColor(Color.BLUE)
+            R.id.toggleButton -> view.setBackgroundColor(Color.YELLOW)
+            R.id.toggleButton2 -> view.setBackgroundColor(Color.BLACK)
+            R.id.toggleButton3 -> view.setBackgroundColor(Color.GREEN)
+            R.id.toggleButton4 -> view.setBackgroundColor(Color.CYAN)
+            R.id.toggleButton5 -> view.setBackgroundColor(Color.BLUE)
+            R.id.toggleButton6 -> view.setBackgroundColor(Color.DKGRAY)
+            R.id.toggleButton7 -> view.setBackgroundColor(Color.GREEN)
+            R.id.toggleButton8 -> view.setBackgroundColor(Color.GRAY)
+            R.id.toggleButton9 -> view.setBackgroundColor(Color.MAGENTA)
+            R.id.toggleButton10 -> view.setBackgroundColor(Color.BLACK)
             //
             else -> view.setBackgroundColor(Color.LTGRAY)
 
